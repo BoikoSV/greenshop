@@ -15,7 +15,6 @@ class CreateSubscribersTable extends Migration
     {
         Schema::create('subscribers', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->index()->nullable();
             $table->string('email')->nullable();
             $table->timestamps();
 

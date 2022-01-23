@@ -15,10 +15,11 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('category_id')->index()->nullable();
+            $table->integer('category_id')->index()->nullable();
             $table->integer('sale_id')->index()->nullable();
             $table->string('product_name');
             $table->string('short_desc')->nullable();
+            $table->text('description')->nullable();
             $table->decimal('price', 10, 2)->nullable();
             $table->integer('count')->unsigned()->default(0);
             $table->string('sku');

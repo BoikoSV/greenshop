@@ -17,7 +17,7 @@ class CreateCouponInstancesTable extends Migration
             $table->increments('id');
             $table->integer('coupon_id')->unsigned();
             $table->string('code', 10)->unique();
-            $table->decimal('sum_left', 10, 2);
+            $table->decimal('funds_used', 10, 2);
             $table->timestamps();
         });
     }

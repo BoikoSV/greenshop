@@ -17,6 +17,7 @@ class CreateSizeTable extends Migration
             $table->increments('id');
             $table->string('size_fullname', 150);
             $table->string('size_shortname', 5);
+            $table->integer('sort')->unsigned();
             $table->timestamps();
         });
     }
